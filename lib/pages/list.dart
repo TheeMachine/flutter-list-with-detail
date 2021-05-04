@@ -61,7 +61,7 @@ class _UserListState extends State<UserList> {
             }
 
             // By default, show a loading spinner.
-            return CircularProgressIndicator();
+            return Center(child: CircularProgressIndicator());
           },
         ),
       ),

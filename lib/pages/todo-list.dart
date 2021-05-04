@@ -31,35 +31,32 @@ class _TodoListState extends State<TodoList> {
   @override
   Widget build(BuildContext context) {
     return Container(
-       child: Container(
-        child: FutureBuilder<List<Todo>>(
-          future: todoList,
-          builder: (context, snapshot) {
-            if (snapshot.hasData) {
-              // return Text(snapshot.data!.title);
-              return ListView.builder(
-                shrinkWrap: true,
-                itemBuilder: (BuildContext context, int index) {
-                  return Column(
-                    children: [
-                      SizedBox(height: 1),
-                      TodoListCard(snapshot.data[index]),
-                      SizedBox(height: 1)
-                    ],
-                    
-                  );
-                },
-                itemCount: snapshot.data.length,
-              );
-            } else if (snapshot.hasError) {
-              return Text("${snapshot.error}");
-            }
-
-            // By default, show a loading spinner.
-            return CircularProgressIndicator();
-          },
-        ),
-      ),
-    );
+     child: FutureBuilder<List<Todo>>(
+       future: todoList,
+       builder: (context, snapshot) {
+         if (snapshot.hasData) {
+           // return Text(snapshot.data!.title);
+           return ListView.builder(
+             shrinkWrap: true,
+             itemBuilder: (BuildContext context, int index) {
+               return Column(
+                 children: [
+                   SizedBox(height: 1),
+                   TodoListCard(snapshot.data[index]),
+                   SizedBox(height: 1)
+                 ],
+                 
+               );
+             },
+             itemCount: snapshot.data.length,
+           );
+         } else if (snapshot.hasError) {
+           return Text("${snapshot.error}");
+         }
+         
+         return CircularProgressIndicator();
+       },
+     ),
+      );
   }
 }

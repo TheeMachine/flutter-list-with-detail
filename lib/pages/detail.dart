@@ -22,7 +22,7 @@ class _UserDetailState extends State<UserDetail> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text(user.name + "'s Detail")),
-        body: Container(
+        body: Center(
       child: TodoList(userId: user.id),
     ));
   }
