@@ -3,4 +3,4 @@
 Example for jsonplaceholder list and show detail 
 
 
-<img src="https://user-images.githubusercontent.com/38347131/117049979-814e9600-ad1d-11eb-846a-8fa4261f0899.gif" width="300"  height="600"   />
+<img src="https://user-images.githubusercontent.com/38347131/117065166-cd0a3b00-ad2f-11eb-81e4-475a29af244b.gif" width="300"  height="600"   />
